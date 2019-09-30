@@ -1,4 +1,6 @@
-﻿namespace BatteryMonitor
+﻿using System;
+
+namespace BatteryMonitor
 {
     partial class Form1
     {
@@ -30,8 +32,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.strPowerLineStatus = new System.Windows.Forms.Label();
+            this.batterylife = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -57,25 +59,25 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Power Source :";
             // 
-            // label3
+            // strPowerLineStatus
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(268, 110);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 29);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Default";
+            this.strPowerLineStatus.AutoSize = true;
+            this.strPowerLineStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.strPowerLineStatus.Location = new System.Drawing.Point(268, 110);
+            this.strPowerLineStatus.Name = "strPowerLineStatus";
+            this.strPowerLineStatus.Size = new System.Drawing.Size(88, 29);
+            this.strPowerLineStatus.TabIndex = 2;
+            this.strPowerLineStatus.Text = "Default";
             // 
-            // label4
+            // batterylife
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(268, 213);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 29);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Default";
+            this.batterylife.AutoSize = true;
+            this.batterylife.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.batterylife.Location = new System.Drawing.Point(268, 213);
+            this.batterylife.Name = "batterylife";
+            this.batterylife.Size = new System.Drawing.Size(88, 29);
+            this.batterylife.TabIndex = 3;
+            this.batterylife.Text = "Default";
             // 
             // button1
             // 
@@ -103,25 +105,28 @@
             this.ClientSize = new System.Drawing.Size(575, 471);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.batterylife);
+            this.Controls.Add(this.strPowerLineStatus);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+           
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
+        
+
         #endregion
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label batterylife;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        public System.Windows.Forms.Label strPowerLineStatus;
     }
 }
 

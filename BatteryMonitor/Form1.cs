@@ -26,5 +26,33 @@ namespace BatteryMonitor
         {
             Application.Exit();
         }
+
+        public String GetPowerSource()
+        {
+            string strPowerLineStatus = "Default";
+            // Getting the current system power status.
+            switch (SystemInformation.PowerStatus.PowerLineStatus)
+            {
+                case PowerLineStatus.Offline:
+                    strPowerLineStatus = "Battery";
+                    break;
+                case PowerLineStatus.Online:
+                    strPowerLineStatus = "AC Power";
+                    break;
+                case PowerLineStatus.Unknown:
+                    strPowerLineStatus = "Unknown";
+                    break;
+            }
+            return strPowerLineStatus;
+        }
+        public float GetBatteryStatus()
+        {
+            float batterylife;
+            batterylife = SystemInformation.PowerStatus.BatteryLifePercent;
+            batterylife *= 100.0f;
+            return batterylife;
+        }
+
     }
+   
 }
