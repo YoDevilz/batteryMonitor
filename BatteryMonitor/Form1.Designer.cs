@@ -97,6 +97,7 @@ namespace BatteryMonitor
             this.button2.TabIndex = 5;
             this.button2.Text = "Refresh";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 
@@ -111,7 +112,6 @@ namespace BatteryMonitor
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
-           
             this.ResumeLayout(false);
             this.PerformLayout();
 

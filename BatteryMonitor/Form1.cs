@@ -15,6 +15,13 @@ namespace BatteryMonitor
         public Form1()
         {
             InitializeComponent();
+            Refresh();
+        }
+
+        public void Refresh()
+        {
+            strPowerLineStatus.Text = GetPowerSource();
+            batterylife.Text = GetBatteryStatus().ToString();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -53,6 +60,10 @@ namespace BatteryMonitor
             return batterylife;
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Refresh();
+        }
     }
    
 }
